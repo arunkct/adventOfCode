@@ -35,10 +35,10 @@ public class Day1Problem1 {
 		
 	}
 	
-	private int readAndProcessFile() {
+	private int readAndProcessFile(String fileName) {
 	    int sum=0;
 		try {
-	        File myObj = new File("input.txt");
+	        File myObj = new File(fileName);
 	        Scanner myReader = new Scanner(myObj);
 	        while (myReader.hasNextLine()) {
 	          String data = myReader.nextLine();
@@ -57,7 +57,7 @@ public class Day1Problem1 {
 	public static void main(String[] args) {
 
 		Day1Problem1 problem = new Day1Problem1();
-		int result = problem.readAndProcessFile();
+		int result = problem.readAndProcessFile("input.txt");
 				
 
 		System.out.print(" Solution = " + result );
